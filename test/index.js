@@ -2,14 +2,15 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
-const generateMarkdown = require("./utils/generateMarkdown");
+const generateMarkdown = require("./utils/generateMarkdown.js");
+
 
 
 // TODO: Create an array of questions for user input
 const questions = [
     {
         type: 'input',
-        message:'Please enter your GitHub username sans "a":',
+        message:'Please enter your GitHub username sans "@":',
         name: 'username',
         validate: function (input) {
             if (input.length < 1) {
@@ -86,8 +87,13 @@ const questions = [
     },
     {
         type: 'input',
-        message:'Provide instructions and examples for use (include screenshots):',
+        message:'Provide instructions and examples for use:',
         name: 'usage',
+    },
+    {
+        type: 'input',
+        message:'Provide the file address for your screenshot (i.e. https://wallpapers.com/images/hd/cool-profile-picture-87h46gcobjl5e4xu.jpg):',
+        name: 'screenshot',
     },
     {
         type: 'input',
@@ -110,31 +116,25 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-writeToFile(fileName, data) = () => {
-    fs.writeFile(fileName, generateMarkdown(data), (err) => {
+
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, function(err) {
         if (err) {
             return console.log(err);
+        } else {
+            console.log("Success!");
         }
-        console.log("Success!");
+        
     });
 }
 
-const writeFile = util.promisify(writeToFile);
 
 // TODO: Create a function to initialize app
-init() = () => {
-    try {
-        const responses = inquirer.prompt(questions);
-            console.log('Your answers: ', responses);
-        const markdown = generateMarkdown(responses);
-            console.log('Your README: ', markdown);
-        writeFile('README.md', markdown);
-
-
-    } catch (err) {
-        console.log(err);
-    }
-};
+function init() {
+    inquirer.prompt(questions).then(function(data) {
+        writeToFile("README.md", generateMarkdown(data));
+    });
+}
 
 // Function call to initialize app
 init();
