@@ -26,7 +26,19 @@ const questions = [
         name: 'repository',
         validate: function (input) {
             if (input.length < 1) {
-                            return console.log("Please enter the name of your project repository");
+                            return console.log("Please enter a valid repository name");
+                        } else {
+                            return true;
+                        }
+        }
+    },
+     {
+        type: 'input',
+        message:'Please enter your email address (enter "N/A" if you would not like to provide your email):',
+        name: 'email',
+        validate: function (input) {
+            if (input.length < 1) {
+                            return console.log("Please enter a valid email address or N/A");
                         } else {
                             return true;
                         }
@@ -89,20 +101,31 @@ const questions = [
         type: 'input',
         message:'Provide instructions and examples for use:',
         name: 'usage',
+        validate: function (input) {
+            if (input.length < 1) {
+                            return console.log("Please provide instructions for application use");
+                        } else {
+                            return true;
+                        }
     },
     {
         type: 'input',
-        message:'Provide the file address for your screenshot (i.e. https://wallpapers.com/images/hd/cool-profile-picture-87h46gcobjl5e4xu.jpg):',
+        message:'Provide the file address for your screenshot or enter "None" (i.e. https://wallpapers.com/images/hd/cool-profile-picture-87h46gcobjl5e4xu.jpg):',
         name: 'screenshot',
     },
     {
         type: 'input',
-        message:'Provide tests written for the project (if applicable; enter "None" if not applicable):',
+        message:'Provide tests written for the project (enter "None" if not applicable):',
         name: 'tests',
     },
     {
         type: 'input',
-        message:'List your collaborators (enter "None" if applicable):',
+        message:'Provide instructions for individuals who wish to contribute (enter "None" if not applicable):',
+        name: 'contribution',
+    },
+    {
+        type: 'input',
+        message:'List your collaborators (enter "None" if not applicable):',
         name: 'credits',
     },
     {
