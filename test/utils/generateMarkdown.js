@@ -7,12 +7,14 @@ function generateMarkdown(data) {
     ${data.userStory}
 
     ## Table of Contents
-    * # Acceptance Criteria
-    * # Installation
-    * # Usage
-    * # Tests
-    * # Credits
-    * # License
+    * [`acceptanceCriteria`](#acceptanceCriteria)
+    * [`installation`](#installation)
+    * [`usage`](#usage)
+    * [`tests`](#tests)
+    * [`contributing`](#contribution)
+    * [`credits`](#credits)
+    * [`license`](#license)
+    * [`questions`](#questions)
 
     ## Acceptance Criteria
     ${data.acceptanceCriteria}
@@ -27,11 +29,19 @@ function generateMarkdown(data) {
     ## Tests
     ${data.tests}
 
+    ## Contributing
+    ${data.contribution}
+
     ## Credits
     ${data.credits}
 
     ## License
     ${data.license}
+
+    ## Questions
+    ### GitHub Profile: [${data.username}](https://github.com/${data.username})
+    ### Github Repository: ${data.repository}
+    ### Email Address: ${data.email}
   `;
 }
 
