@@ -38,7 +38,7 @@ function generateMarkdown(data) {
 
     ## Usage
     ${data.usage}
-    ![img](${data.screenshot})
+    [img](${data.screenshot})
 
     ## Tests
     ${data.tests}
