@@ -1,21 +1,8 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-function renderLicenseBadge(license) {}
-
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {}
-
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {}
-
-
-
-function generateMarkdown(data) {
+const generateMarkdown = data => {
   return `
     # ${data.title}
-
+    ![Github licence](http://img.shields.io/badge/license-${data.license}-blue.svg)
+    
     ## Description: 
     ${data.description}
     ${data.userStory}
@@ -50,13 +37,15 @@ function generateMarkdown(data) {
     ${data.credits}
 
     ## License
-    ${data.license}
+    This project is licensed under [${data.license}](https://spdx.org/licenses/)
 
     ## Questions
-    ### GitHub Profile: [${data.username}](https://github.com/${data.username})
-    ### Github Repository: ${data.repository}
-    ### Email Address: ${data.email}
+    If you have any questions about this projects, please contact me:
+    GitHub Profile: [${data.username}](https://github.com/${data.username})
+    Github Repository: [${data.repository}](https://github.com/murpheycm/README_generator)
+    Email Address: ${data.email}
   `;
 }
 
+//Export function to be used by index.js
 module.exports = generateMarkdown;
