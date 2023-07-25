@@ -1,51 +1,54 @@
 // function to generate the markdown for README
 const generateMarkdown = data => {
-  return `
-    # ${data.title}
-    ![Github licence](http://img.shields.io/badge/license-${data.license}-blue.svg)
-    
-    ## Description: 
-    ${data.description}
-    ${data.userStory}
+return `
+# ${data.title}
+![Github licence](http://img.shields.io/badge/license-${data.license}-blue.svg)
 
-    ## Table of Contents
-    * [acceptanceCriteria](#acceptanceCriteria)
-    * [installation](#installation)
-    * [usage](#usage)
-    * [tests](#tests)
-    * [contributing](#contribution)
-    * [credits](#credits)
-    * [license](#license)
-    * [questions](#questions)
+## Description: 
+${data.description}
+${data.userStory}
 
-    ## Acceptance Criteria
-    ${data.acceptanceCriteria}
+## Table of Contents
+* [Acceptance Criteria](#acceptanceCriteria)
+* [Installation](#installation)
+* [Usage](#usage)
+* [Tests](#tests)
+* [Contributing](#contribution)
+* [Credits](#credits)
+* [License](#license)
+* [Questions](#questions)
 
-    ## Installation
-    ${data.installation}
+## Acceptance Criteria
+${data.acceptanceCriteria}
 
-    ## Usage
-    ${data.usage}
-    [img](${data.screenshot})
+## Installation
+${data.installation}
 
-    ## Tests
-    ${data.tests}
+## Usage
+${data.usage}
+![img](${data.screenshot})
 
-    ## Contributing
-    ${data.contribution}
+## Tests
+${data.tests}
 
-    ## Credits
-    ${data.credits}
+## Contributing
+${data.contribution}
 
-    ## License
-    This project is licensed under [${data.license}](https://spdx.org/licenses/)
+## Credits
+${data.credits}
 
-    ## Questions
-    If you have any questions about this projects, please contact me:
-    GitHub Profile: [${data.username}](https://github.com/${data.username})
-    Github Repository: [${data.repository}](https://github.com/murpheycm/README_generator)
-    Email Address: ${data.email}
-  `;
+## License
+This project is licensed under [${data.license}](https://spdx.org/licenses/)
+
+## Questions
+If you have any questions about this projects, please contact me:
+
+GitHub Profile: [${data.username}](https://github.com/${data.username})
+
+Github Repository: [${data.repository}](https://github.com/murpheycm/README_generator)
+
+Email Address: ${data.email}
+`;
 }
 
 //Export function to be used by index.js

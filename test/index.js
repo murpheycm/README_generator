@@ -1,7 +1,6 @@
 // TODO: Include packages needed for this application
 const inquirer = require("inquirer");
 const fs = require("fs");
-const util = require("util");
 const generateMarkdown = require("./utils/generateMarkdown.js");
 
 
@@ -146,7 +145,7 @@ function writeToFile(fileName, data) {
         if (err) {
             return console.log(err);
         } else {
-            console.log("Success!");
+            console.log("Your README.md file has been generated!");
         }
         
     });
