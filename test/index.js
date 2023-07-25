@@ -107,6 +107,7 @@ const questions = [
                         } else {
                             return true;
                         }
+        }
     },
     {
         type: 'input',

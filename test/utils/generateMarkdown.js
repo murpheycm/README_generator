@@ -1,3 +1,4 @@
+// function to generate the markdown for README
 const generateMarkdown = data => {
   return `
     # ${data.title}
@@ -8,14 +9,14 @@ const generateMarkdown = data => {
     ${data.userStory}
 
     ## Table of Contents
-    * [`acceptanceCriteria`](#acceptanceCriteria)
-    * [`installation`](#installation)
-    * [`usage`](#usage)
-    * [`tests`](#tests)
-    * [`contributing`](#contribution)
-    * [`credits`](#credits)
-    * [`license`](#license)
-    * [`questions`](#questions)
+    * [acceptanceCriteria](#acceptanceCriteria)
+    * [installation](#installation)
+    * [usage](#usage)
+    * [tests](#tests)
+    * [contributing](#contribution)
+    * [credits](#credits)
+    * [license](#license)
+    * [questions](#questions)
 
     ## Acceptance Criteria
     ${data.acceptanceCriteria}
