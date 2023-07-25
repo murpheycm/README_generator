@@ -6,10 +6,10 @@ return `
 
 ## Description: 
 ${data.description}
-${data.userStory}
+
+> ${data.userStory}
 
 ## Table of Contents
-* [Acceptance Criteria](#acceptanceCriteria)
 * [Installation](#installation)
 * [Usage](#usage)
 * [Tests](#tests)
@@ -18,15 +18,13 @@ ${data.userStory}
 * [License](#license)
 * [Questions](#questions)
 
-## Acceptance Criteria
-${data.acceptanceCriteria}
-
 ## Installation
 ${data.installation}
 
 ## Usage
 ${data.usage}
-![img](${data.screenshot})
+
+![alt text](${data.screenshot})
 
 ## Tests
 ${data.tests}

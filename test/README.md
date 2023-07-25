@@ -1,13 +1,13 @@
 
-# README Generator
+# CLI README.md Generator with Node.js
 ![Github licence](http://img.shields.io/badge/license-MIT-blue.svg)
 
 ## Description: 
-Generates a professional README
-USER STORY
+A command-line application that dynamically generates a professional README.md file from a user's input using the Inquirer package
+
+> AS A developer, I WANT a README generator, SO THAT I can quickly create a professional README for a new project
 
 ## Table of Contents
-* [Acceptance Criteria](#acceptanceCriteria)
 * [Installation](#installation)
 * [Usage](#usage)
 * [Tests](#tests)
@@ -16,15 +16,13 @@ USER STORY
 * [License](#license)
 * [Questions](#questions)
 
-## Acceptance Criteria
-ACCEPTANCE
-
 ## Installation
-Install node.js before use. Install npm  i inquirer@8.2.4
+Install node.js before use. CLI: npm i inquirer@8.2.4 and node index.js
 
 ## Usage
-None
-![img](https://images.unsplash.com/photo-1526547541286-73a7aaa08f2a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60)
+Used to create high-quality README.md files for your projects.
+
+![alt text](./utils/screenvideo.gif)
 
 ## Tests
 None

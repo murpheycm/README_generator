@@ -81,18 +81,6 @@ const questions = [
     },
     {
         type: 'input',
-        message:'Provide the "Acceptance Criteria" for your project:',
-        name: 'acceptanceCriteria',
-        validate: function (input) {
-            if (input.length < 1) {
-                            return console.log("Please enter the Acceptance Criteria of your project");
-                        } else {
-                            return true;
-                        }
-        }
-    },
-    {
-        type: 'input',
         message:'Does your project require any installation steps (enter "None" if not applicable)?',
         name: 'installation',
     },
